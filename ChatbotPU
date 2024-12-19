@@ -1,0 +1,22 @@
+import random
+
+def president_university_ai_agent(user_input):
+    if "halo" in user_input.lower() or "hai" in user_input.lower():
+        return "Halo Kak! Selamat datang di President University. Ada yang bisa kami bantu?"
+
+    if "program studi" in user_input.lower():
+        return "Untuk informasi program studi, silakan kunjungi laman berikut: [https://president.ac.id/]"
+
+    if "magang" in user_input.lower():
+        return "untuk informasi lebih lanjut seputar magang (internship) silakan kunjungi laman berikut: [https://president.ac.id/internship/]"
+
+    # Default response if the agent doesn't know how to answer
+    return "Maaf Kak, saya belum mengerti pertanyaan Kakak. Jika ada kendala, silakan hubungi team_it@president.ac.id untuk bantuan lebih lanjut."
+
+# Example usage (replace with your chatbot integration)
+while True:
+    user_query = input("User: ")
+    if user_query.lower() == "exit":
+        break
+    agent_response = president_university_ai_agent(user_query)
+    print("Agent:", agent_response)
